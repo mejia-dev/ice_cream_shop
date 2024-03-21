@@ -10,12 +10,13 @@
 </head>
 
 <body>
+  <h2>Treats - Ice Cream Shop</h2>
   {% if treats_list %}
     {% for treat in treats_list %}
     <li><a href="{% url "shop:treats/detail" treat.id %}">{{ treat.treat_name }}</a></li>
     {% endfor %}
   {% else %}
-  <p>No treats have been added.</p>
+  <p>No treats have been added yet.</p>
   {% endif %}
   <a href="{% url "shop:index" %}">Home</a>
 </body>
