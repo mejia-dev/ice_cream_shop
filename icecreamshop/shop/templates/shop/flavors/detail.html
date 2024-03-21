@@ -11,6 +11,16 @@
   <h1>{{ flavor.flavor_name }}</h1>
   
   <p>Price of {{ flavor.flavor_name }}: {{ flavor.price }}</p>
+  
+    <p><strong>Available {{ flavor.flavor_name }}-Flavored Treats:</strong>
+      {% if flavor.treat_set.all %}
+        {% for treat in flavor.treat_set.all %}
+          <li><a href="{% url 'shop:treats/detail' treat.id %}">{{ treat.treat_name }}</a></li>
+        {% endfor %}
+    {% else %}
+      <p>There are no treats in {{ flavor.flavor_name }} flavor yet.</p>
+    {% endif %}
+    </p>
 
   <a href="{% url 'shop:flavors' %}">Back to All Flavors</a>
 </body>
