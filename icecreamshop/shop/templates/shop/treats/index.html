@@ -11,11 +11,9 @@
 
 <body>
   {% if treats_list %}
-  <ul>
     {% for treat in treats_list %}
     <li><a href="{% url "shop:treats/detail" treat.id %}">{{ treat.treat_name }}</a></li>
     {% endfor %}
-  </ul>
   {% else %}
   <p>No treats have been added.</p>
   {% endif %}

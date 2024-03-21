@@ -11,11 +11,9 @@
 
 <body>
   {% if flavors_list %}
-  <ul>
     {% for flavor in flavors_list %}
-    <li>{{ flavor.flavor_name }}</li>
+    <li><a href="{% url "shop:flavors/detail" flavor.id %}">{{ flavor.flavor_name }}</a></li>
     {% endfor %}
-  </ul>
   {% else %}
   <p>No flavors have been added.</p>
   {% endif %}
