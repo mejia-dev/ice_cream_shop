@@ -5,14 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% load static %}
-  <link rel="stylesheet" href="{% static 'shop/style.css' %}">
+  <link rel="stylesheet" href="{% static 'shop/styles.css' %}">
   <title>Ice Cream Shop</title>
 </head>
 
 <body>
   <ul>
-    
-    {% comment %} <li><a href="{% url 'shop:flavors' %}">Link</a></li> {% endcomment %}
+    <a href="{% url 'shop:flavors' %}">Flavors</a>
     {% comment %} <li><a href="{% url 'shop:treats' %}">Link</a></li> {% endcomment %}
   </ul>
 </body>

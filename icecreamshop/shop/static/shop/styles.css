@@ -1,0 +1,78 @@
+@import url('https://fonts.cdnfonts.com/css/delight-coffee-2');
+@import url('https://fonts.cdnfonts.com/css/static-bold');
+@import url('https://fonts.cdnfonts.com/css/budokan-rounded');
+@import url('https://fonts.cdnfonts.com/css/grateful-everyday');
+
+.error {
+  color: red;
+}
+
+.error>span>a {
+  color: red;
+}
+
+#header {
+  background-color: #c196ca;
+  color: white;
+  border-radius: 20px;
+  padding: 1px;
+}
+
+body {
+  background-color: #eedef2;
+  text-align: center;
+}
+
+#footer {
+  background-color: #93bc9f;
+  padding: 1px;
+  position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+}
+
+h1 {
+  font-family: 'Delight Coffee', sans-serif;
+  font-size: 200%;
+}
+
+h2, h3, h4, h5, strong {
+  font-family: 'Budokan Rounded', sans-serif;
+}
+
+button {
+  background-color: #b6d3be;
+  border-radius: 10px;
+  border-style: none;
+  margin: 10px;
+  padding: 10px;
+}
+
+input {
+  background-color: #b6d3be;
+  font-family: 'Grateful Everyday', sans-serif;
+}
+
+a {
+  font-family: 'Static Bold', sans-serif;
+  font-size: 120%;
+}
+
+p, label {
+  font-family: 'Grateful Everyday', sans-serif;
+}
+
+.validation-summary-errors {
+  font-family: 'Grateful Everyday', sans-serif;
+  color: red;
+}
+
+.validation-summary-errors > ul {
+  list-style-type: none;
+}
+
+#homeContent {
+  display: flex;
+  justify-content: space-evenly;
+}
