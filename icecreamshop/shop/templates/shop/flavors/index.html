@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'polls/style.css' %}">
+  <title>Document</title>
+</head>
+
+<body>
+  {% if flavors_list %}
+  <ul>
+    {% for flavor in flavors_list %}
+    <li>{{ flavor.flavor_name }}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No polls are available.</p>
+  {% endif %}
+</body>
+
+</html>
