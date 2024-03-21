@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'shop/styles.css' %}">
+  <title>{{ treat.treat_name }}- Treats - Ice Cream Shop</title>
+</head>
+<body>
+  <h1>{{ treat.treat_name }}</h1>
+  
+  <p>Price of {{ treat.treat_name }}: {{ treat.price }}</p>
+
+  <a href="{% url 'shop:treats' %}">Back to All Treats</a>
+</body>
+</html>

@@ -13,7 +13,7 @@
   {% if treats_list %}
   <ul>
     {% for treat in treats_list %}
-    <li>{{ treat.treat_name }}</li>
+    <li><a href="{% url "shop:treats/detail" treat.id %}">{{ treat.treat_name }}</a></li>
     {% endfor %}
   </ul>
   {% else %}
