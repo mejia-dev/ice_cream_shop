@@ -13,7 +13,7 @@
   <p>Price of {{ treat.treat_name }}: {{ treat.price }}</p>
 
   <p><strong>Available Flavors of {{ treat.treat_name }}:</strong>
-  {% if not treat.flavors.all.count <= 0 %}
+  {% if treat.flavors.all.count > 0 %}
       {% for flavor in treat.flavors.all %}
           <li><a href="{% url "shop:flavors/detail" flavor.id %}">{{ flavor.flavor_name }}</a></li><br />
       {% endfor %}
