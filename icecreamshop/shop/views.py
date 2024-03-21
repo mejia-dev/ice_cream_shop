@@ -11,5 +11,11 @@ class FlavorsIndexView(generic.ListView):
     context_object_name = "flavors_list"
 
     def get_queryset(self):
-        # return Flavor.objects
         return Flavor.objects.order_by("flavor_name")
+    
+class TreatsIndexView(generic.ListView):
+    template_name = "shop/treats/index.html"
+    context_object_name = "treats_list"
+
+    def get_queryset(self):
+        return Treat.objects.order_by("treat_name")

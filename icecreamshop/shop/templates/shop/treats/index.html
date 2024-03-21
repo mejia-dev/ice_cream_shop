@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'shop/styles.css' %}">
+  <title>Treats - Ice Cream Shop</title>
+</head>
+
+<body>
+  {% if treats_list %}
+  <ul>
+    {% for treat in treats_list %}
+    <li>{{ treat.treat_name }}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p>No treats have been added.</p>
+  {% endif %}
+  <a href="{% url "shop:index" %}">Home</a>
+</body>
+
+</html>
