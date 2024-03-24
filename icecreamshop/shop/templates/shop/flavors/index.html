@@ -1,9 +1,9 @@
 {% extends "../base.html" %}
   {% block title %}
-    <title>Flavors - Ice Cream Shop</title>
+    Flavors
   {% endblock %}
   {% block content %}
-    <h2>Flavors - Ice Cream Shop</h2>
+    <h2>Flavors</h2>
     {% if flavors_list %}
       {% for flavor in flavors_list %}
       <a href="{% url "shop:flavors/detail" flavor.id %}">{{ flavor.flavor_name }}</a><br />

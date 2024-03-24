@@ -1,9 +1,9 @@
 {% extends "../base.html" %}
   {% block title %}
-    <title>Treats - Ice Cream Shop</title>
+    Treats
   {% endblock %}
   {% block content %}
-    <h2>Treats - Ice Cream Shop</h2>
+    <h2>Treats</h2>
     {% if treats_list %}
       {% for treat in treats_list %}
       <a href="{% url "shop:treats/detail" treat.id %}">{{ treat.treat_name }}</a><br />
