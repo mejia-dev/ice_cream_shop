@@ -1,47 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'shop/styles.css' %}">
-  <title>Ice Cream Shop</title>
-</head>
-
-<body>
-  <h2>Ice Cream Shop</h2>
-
-  <div id="homeContent">
-    <div>
-      <h4>Treats</h4>
-      {% comment %} @if (Model["treats"].Length == 0)
-      {
-        <p>No treats have been added yet.</p>
-      }
-        @foreach (Treat trt in Model["treats"])
-        {
-          <li>@Html.ActionLink(@trt.TreatName, "Details", "Treats", new { id = @trt.TreatId })</li>
-        }
-      <p>@Html.ActionLink("Manage Treats", "Index", "Treats")</p> {% endcomment %}
-      <a href="{% url 'shop:treats' %}">Shop Treats</a>
+{% extends "./base.html" %}
+  {% block title %}Home{% endblock %}
+  {% block content %}
+    <h1>Welcome!</h1>
+    <div id="homeContent">
+      <div>
+        <h4>Treats</h4>
+        <a href="{% url 'shop:treats' %}">Shop Treats</a>
+      </div>
+      <div>
+        <h4>Flavors</h4>
+        <a href="{% url 'shop:flavors' %}">Shop Flavors</a>
+      </div>
     </div>
-  
-    <div>
-      <h4>Flavors</h4>
-      {% comment %} @if (Model["flavors"].Length == 0)
-      {
-        <p>No flavors have been added yet.</p>
-      }
-        @foreach (Flavor flvr in Model["flavors"])
-        {
-          <li>@Html.ActionLink(@flvr.FlavorName, "Details", "Flavors", new { id = @flvr.FlavorId })</li>
-        }
-      <p>@Html.ActionLink("Manage Flavors", "Index", "Flavors")</p> {% endcomment %}
-      <a href="{% url 'shop:flavors' %}">Shop Flavors</a>
-    </div>
-  </div>
-    
-</body>
-
-</html>
+  {% endblock %}
