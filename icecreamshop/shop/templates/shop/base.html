@@ -1,0 +1,30 @@
+<html> 
+<head> 
+</head> 
+<body> 
+  <header> 
+    <div id="header">
+      <h1>Pierre's Sweet and Savory Treats</h1>
+      <div id="headerNavDiv">
+        <a href="{% url "shop:index"%}">Home</a>
+        <a href="{% url "shop:treats"%}">Treats</a>
+        <a href="{% url "shop:flavors"%}">Flavors</a>
+        <div>
+          <a href="{% url "admin"%}">Admin Login</a>
+        </div>
+      </div>
+    </div>
+  </header> 
+  {% block content %} 
+  {% endblock %} 
+  <footer> 
+    <div id="footer">
+      <p>
+          ©2024 Pierre's Sweet and Savory Treats
+          <br />
+          Web Design by <a href="https://github.com/mejia-dev" target="_blank" rel="noopener noreferrer">github.com/mejia-dev</a><br />
+      </p>
+  </div>
+  </footer> 
+</body> 
+</html>
