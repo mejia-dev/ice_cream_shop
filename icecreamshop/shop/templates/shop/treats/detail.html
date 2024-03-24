@@ -6,7 +6,7 @@
   {% endblock %}
   {% block content %}
     <h2>{{ treat.treat_name }}</h2>
-    <p>Price of {{ treat.treat_name }}: {{ treat.price }}</p>
+    <p>Price of {{ treat.treat_name }}: ${{ treat.price }}</p>
     <p><strong>Available Flavors of {{ treat.treat_name }}:</strong>
       {% if treat.flavors.all.count > 0 %}
         {% for flavor in treat.flavors.all %}
