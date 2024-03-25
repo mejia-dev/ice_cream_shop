@@ -122,7 +122,7 @@ This section will cover how to install MySQL Community Server which is **require
    git clone https://github.com/mejia-dev/ice_cream_shop.git
    ```
 
-#### Step 2: Create .env
+#### Step 2: .env Setup
 * This project requires a file titled `.env` residing in the project directory (not the root directory).
   * Navigate to the project directory:
     ```bash
@@ -132,7 +132,7 @@ This section will cover how to install MySQL Community Server which is **require
     ```bash
     touch .env
     ```
-  * Using any text editor, modify the file to include the following lines. Replace any of the values with the necessary values for the database environment being used:
+  * Using any text editor, modify the file to include the following lines. Replace any of the values with the necessary values for the database environment being used. **Please note:** Django is unable to create a MySQL database. This must be done manually in order for Django to use it:
     ```javascript
     DBCONFIG_NAME = "django-icecreamshop"
     DBCONFIG_USER = "YOUR_USERNAME_HERE"
@@ -140,6 +140,13 @@ This section will cover how to install MySQL Community Server which is **require
     DBCONFIG_HOST = "localhost"
     DBCONFIG_PORT = "3306"
     ```
+  * Create a new secret key using:
+      ```python
+      from django.core.management.utils import get_random_secret_key
+      print(get_random_secret_key())
+      ```
+  * Save the key in `.env`.
+  * In `settings.py`, change `DEBUG` to False and set `SECRET_KEY = os.getenv("SECRET_KEY")`.
 
 
 
