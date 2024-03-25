@@ -164,7 +164,7 @@ This section will cover how to install MySQL Community Server which is **require
 
 * Install the requirements from the ice_cream_shop root directory:
   ```bash
-  pip install  -r requirements.txt
+  pip install -r requirements.txt
   ```
 
 * Create the database:
