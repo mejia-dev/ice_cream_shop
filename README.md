@@ -133,12 +133,12 @@ This section will cover how to install MySQL Community Server which is **require
     touch .env
     ```
   * Using any text editor, modify the file to include the following lines. Replace any of the values with the necessary values for the database environment being used:
-    ```json
+    ```javascript
     DBCONFIG_NAME = "django-icecreamshop"
     DBCONFIG_USER = "YOUR_USERNAME_HERE"
-    DBCONFIG_PASSWORD= "YOUR_PASSWORD_HERE"
-    DBCONFIG_HOST= "localhost"
-    DBCONFIG_PORT= "3306"
+    DBCONFIG_PASSWORD = "YOUR_PASSWORD_HERE"
+    DBCONFIG_HOST = "localhost"
+    DBCONFIG_PORT = "3306"
     ```
 
 
